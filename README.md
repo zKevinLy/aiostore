@@ -1,6 +1,6 @@
 # AIOStore
 
-One master list of [Store](https://Store.io) sources, merged into a single source you add once.
+One master list of "Store" sources, merged into a single source you add once.
 
 Some sources come straight from the app's developers. For apps that only publish `.ipa` files on GitHub
 releases, this repo **generates** a source automatically and keeps it up to date.
