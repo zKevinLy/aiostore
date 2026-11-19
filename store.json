@@ -6,6 +6,96 @@
   "sourceURL": "https://raw.githubusercontent.com/zKevinLy/aiostore/main/store.json",
   "apps": [
     {
+      "name": "Spotube",
+      "bundleIdentifier": "oss.krtirtho.spotube",
+      "developerName": "Spotube",
+      "subtitle": "Open-source music streaming",
+      "localizedDescription": "🎧 Open source music streaming app! Available for both desktop & mobile!",
+      "iconURL": "https://avatars.githubusercontent.com/u/263316120?v=4",
+      "category": "entertainment",
+      "versions": [
+        {
+          "version": "6.0.0",
+          "date": "2026-11-10T03:40:12Z",
+          "localizedDescription": "## Spotube V6 is here 🎉🚀\n\n### 🔥Highlights\n\n- Migration from Flutter to Compose Multiplatform, [learn why we did it](https://spotube.cc/blog/compose-multiplatform-migration/)\n- UI redesign, introducing [Millennium](https://github.com/team-spotube/millennium/) UI. 2000s look and feel with 2026's modernity\n- Jam sessions, play music with friends and family in sync. Runs on a new dedicated room server, with host-only controls and device bans to keep rooms safe\n- Full Android Auto integration. Browse, Library, Search all are there now, not just queue\n- iOS now plays audio through VLC, so every streaming format works, and keeps playing in the background\n- Migration from hetu_script to Kotlin for plugin development. Powered by [Zipline by Cashapp](https://github.com/cashapp/zipline/)\n- More extensibility, plugin support for Lyrics provider and Scrobbling providers\n- Redesigned plugin manager. Plugin login pages can only reach cookies and scripts of the domains they declare\n- Native Android APK, with reduced apk size, performance improvements and more native android integrations.\n- Relicensed from BSD-4-Clause to AGPL-3.0-or-later for a more Open Source friendly licensing. And for preventing distribution of closed source and maliciously modified Spotube.\n\n### 💫 Features\n\n- Migration to Compose Multiplatform\n- Add ChipTab component and refactor SearchScreen to use it\n- Add AutocompleteTextField component and integrate it into SearchScreen\n- Enhance AutocompleteTextField with focus management and dropdown behavior\n- Enhance AppSidebar with improved button interactions and visual feedback\n- Implement endless playback recommendations in DeviceAudioPlayerQueue\n- Add GhostIconButton component and enhance button interactions in TrackList\n- Replace IconButton with GhostIconButton in AppExpandedPlayer and AppLargePlayer for improved visual consistency\n- Replace IconButton with GhostIconButton in PlayerQueueContent and PlayableCard for visual consistency\n- Enhance UI components with LocalBaseUITheme for consistent styling and improved interactions\n- Enhance button styles and interactions in Buttons and Theme components for improved UI consistency\n- Simplify highlight implementation in UI components for improved readability and maintainability\n- Add genre selection and tabs to HomeScreen for improved content navigation\n- Implement artist overview screen with loading, error handling, and pagination for albums, related artists, and featured playlists\n- Add genre and featured browsing capabilities to MediaBrowseHelper\n- Implement playlist creation and editing functionality with UI components\n- Add 'Add to Playlist' functionality with UI components and dialogs\n- Add Toggle component and update UI to use it in place of Switch\n- Implement settings section cards for updates, desktop, language, caching, and plugins\n- Update icons in settings sections to use Iconsax library for improved UI consistency\n- Replace FeatherIcons with Iconsax in PluginCard and PluginPermissionsDialog for improved UI consistency\n- Refactor PluginPermissionsDialog to use custom UI components for improved consistency and readability\n- Enhance UI with shared element transitions and improve state management in album and playlist screens\n- Integrate Uniffi for audio metadata reading and writing with Lofty library\n- Replace FeatherIcons with Iconsax in window controls and update sidebar with better design\n- Implement haze effect and UI enhancements in AppLargePlayer and AppShell\n- Enhance haze effect integration in AppShell and AppSidebar for improved UI experience\n- Add adaptive dialog bottom sheet component and enhance plugin installation UI\n- Enhance AdaptiveDialogBottomSheet with dismiss icon and improve plugin screen layout\n- Implement CollectionView component and refactor Album, Playlist, SavedTracks screens for improved UI consistency\n- Add current time management in AudioPlayer for improved playback control\n- Simplify playback control logic in AudioPlayer by removing red…",
+          "downloadURL": "https://github.com/team-spotube/spotube/releases/download/v6.0.0/Spotube-ios.ipa",
+          "size": 45020424,
+          "sha256": "801f3039bab4d09c9ff290d52a495c37aa6707e74bf3d27d22d4b5fcd85fe5fe"
+        },
+        {
+          "version": "5.1.2",
+          "date": "2026-06-05T05:10:18Z",
+          "localizedDescription": "### Bug Fixes\n\n- **newpipe**: Fallback to muxed streams if no audio stream is available\n- Dismiss search dropdown and keyboard on submission\n- Custom image helper null exception\n\n**Full Changelog**: https://github.com/KRTirtho/spotube/compare/v5.1.1...v5.1.2",
+          "downloadURL": "https://github.com/team-spotube/spotube/releases/download/v5.1.2/Spotube-iOS.ipa",
+          "size": 34853093,
+          "sha256": "9ec07f5ff1302567075b3c02cb3a4baac5fa475a65f71a3878f2d78744ba7bc0"
+        },
+        {
+          "version": "5.1.1",
+          "date": "2026-02-24T13:15:09Z",
+          "localizedDescription": "## v5.1.1\n\n### Bug Fixes\n\n- Upgrade NewPipeExtractor to latest version fixing playback issue\n- Lyrics not working\n\n\n## What's Changed\n* chore: replace windows app icon by a higher resolution by @TobseF in https://github.com/KRTirtho/spotube/pull/2838\n\n## New Contributors\n* @TobseF made their first contribution in https://github.com/KRTirtho/spotube/pull/2838\n\n**Full Changelog**: https://github.com/KRTirtho/spotube/compare/v5.1.0...v5.1.1",
+          "downloadURL": "https://github.com/team-spotube/spotube/releases/download/v5.1.1/Spotube-iOS.ipa",
+          "size": 34926819,
+          "sha256": "34917e2c0dfbecef304943483f465b83ec97e194c562adf6241347a8a22229a3"
+        },
+        {
+          "version": "5.1.0",
+          "date": "2025-11-14T11:10:30Z",
+          "localizedDescription": "## Highlights\n\n- New Audio-Source plugins. Ability to add custom audio source created by community aside from official supported sources like YT, Piped etc.\n- NewPipe support for Desktop platforms\n- Single connection streaming instead of chunked streaming\n- Improved download manager with faster download speed, thanks to parallel chunked downloading\n- Queue batch operations support\n\n### Features\n\n- Show plugin source and set the only plugin as default if no plugin is there\n- **playback**: Add dab music source\n- **playback**: Add uncompressed flac playback support\n- Add plugin audio source models and api service\n- **plugins**: Filter plugins by abilities in plugins page and show abilities as badge\n- Add setting default audio source support\n- Move away from track source query and preferences audio quality and codec\n- Add NewPipe support for desktop platforms\n- Add default plugin loading capability\n- **queue**: Add multi-select and bulk actions to queue ([#2839](https://github.com/KRTirtho/spotube/issues/2839))\n- **android**: Add 16KB page size support\n\n### Bug Fixes\n\n- Change plugin download directory to application support\n- **playback**: Play next not working\n- Downloaded tracks are not tagged with metadata\n- Download not working in different devices and slow\n- **playback**: Use stream instead of chunked serving of audio bytes\n\n## New Contributors\n* @Rahul-Sahani04 made their first contribution in https://github.com/KRTirtho/spotube/pull/2839\n\n**Full Changelog**: https://github.com/KRTirtho/spotube/compare/v5.0.0...v5.1.0",
+          "downloadURL": "https://github.com/team-spotube/spotube/releases/download/v5.1.0/Spotube-iOS.ipa",
+          "size": 34982347,
+          "sha256": "64610ac667c5478c6d0adc2ebf18f779388242a0df1f9a17eb6c48e4d97bb5c5"
+        },
+        {
+          "version": "5.0.0",
+          "date": "2025-09-11T18:12:45Z",
+          "localizedDescription": "Thanks for supporting Spotube. The app was in a non-working state for a long time due to legal and other issues.\nWell, I am happy to report that your Spotube is officially back. Now, even more customizable and community-driven.\nI hope users of Spotube will finally be enjoying using Spotube.\n\n## Highlights\n\n- Support for any music metadata service through plugins.\n- Musicbrainz + Listenbrainz official plugin for music metadata.\n- Listenbrainz scrobbling support (through plugin)\n- Documentation for using and developing your own plugins: https://spotube.krtirtho.dev/docs\n- Playback improvements including reduction of skipping issue and HLS support\n- Performance improvements:\n  - Efficient image handling\n  - UI refactors geared towards performance benefits\n  - Offloading of heavy operations like track source search to secondary thread (Isolate)\n\n### Features\n\n- Add ISRC track search for YouTube ([#2594](https://github.com/KRTirtho/spotube/issues/2594))\n- Add new icons #2676 by @alexio-dev ([#2678](https://github.com/KRTirtho/spotube/issues/2678))\n- Add connect confirmation dialog\n- Add metadata api service and models\n- **metadata-plugin**: Add pagination support, feed and playlist CRUD endpoints\n- **metadata-plugin**: Add local storage api\n- Add webview, totp and setInterval apis for plugins\n- Enhance local storage and webview APIs with improved error handling and resource management\n- **metadata_plugin**: Add logout method\n- Update plugin configuration with more fields\n- Implement metadata plugins based on hetu\n- Update models to match hetu_spotube_plugin signature\n- Add user endpoint calls in metadata and paginated async notifiers\n- Add playlist endpoint and providers\n- Add albums metadata endpoint and provider\n- Add artist and album providers\n- Add track endpoint for metadata service\n- Remove green corp names formally\n- **metadata**: Add plugin form\n- Add support for entity specific search\n- Enhance image handling\n- Add support for automatic plugin repository from github and codeberg\n- Use isolate for youtube_explode engine\n- Add repository and plugin API version fields to metadata plugins\n- Update new pipe version\n- **metadata**: Add plugin update checker and dialog for available updates\n- Optimize track options and related artists\n- Add plugin scrobbling support and support button\n- Add ErrorBox and NoDefaultMetadataPlugin components\n\n### Bug Fixes\n\n- Calling /track/:streamId endpoint causes active sourced track to be anything\n- **mobile**: Dialogs in bottom sheet are not opening\n- Default accent color is orange but it shows blue in settings\n- Artist images are not loading up\n- CVE: Remote path traversal through websocket when devices are on same network\n- Endless playback not working\n- **android**: NewPipe invalid search content filters\n- Make YoutubeExplode engine faster\n- Create and delete playlist not working\n- Local track not working and images of local not showing up\n- Local playback not working for tracks with special # (hashtag) characters\n- Inaccessible streaming url causing rapid skips\n- **yt**: Fallback to different search result if all streaming url is inaccessible\n- **playback**: Skip network requests if cached file already exists\n- Yt-dlp playback not working and add partial support for HLS streaming\n- Windows webview2 environment permission issue\n- **playback**: Play not fetching full playlist if playlist is too long\n- **track_options**: Tapping on option doesn't close the menu\n- **playback**: Alternative track sources switch not working\n- **ui**: Lyrics white text in white background and small player buttons\n\n### Translation\n\n- Add Traditional Chinese translation ([#2762](https://github.com/KRTirtho/spotube/issues/2762))\n- Fix Japanese translations ([#2732](https://github.com/KRTirtho/spotube/issues/2732))\n- Correction of the dutch language ([#1306](https://github.com/KRTirtho/spotube/issues/1306))\n\n## Pull Requests\n* feat: fix track search by @ehfd in https://github.com/KRTirtho/spotube/pull/2594\n* chore: re…",
+          "downloadURL": "https://github.com/team-spotube/spotube/releases/download/v5.0.0/Spotube-iOS.ipa",
+          "size": 34486552,
+          "sha256": "bda659bc48187147337c943352a27533ca01396ce383fb4fe3a8227e035008c3"
+        },
+        {
+          "version": "4.0.2",
+          "date": "2025-03-16T18:24:11Z",
+          "localizedDescription": "## Highlights\n\n- Fixes the empty home screen and \"Something went wrong\" bug\n\n### Bug Fixes\n\n- invalid access token exception #2525\n\n\n**Full Changelog**: https://github.com/KRTirtho/spotube/compare/v4.0.1...v4.0.2",
+          "downloadURL": "https://github.com/team-spotube/spotube/releases/download/v4.0.2/Spotube-iOS.ipa",
+          "size": 38528926
+        },
+        {
+          "version": "4.0.1",
+          "date": "2025-03-15T11:52:37Z",
+          "localizedDescription": "> **NOTICE**: If login isn't working after installing the app, logout and login.\n\n## Highlights\n\n- Fixed authentication Error 400 or 429 status due to Spotify API change\n- Fixed system navigation bar on top of bottom navigation\n\n### Bug Fixes\n\n- **android**: navigation overlaying in app navigation\n- add to playlist not working in smaller screen devices\n- language picker search broken\n- **generate_playlist**: create playlist not adding tracks nor navigating to playlist page\n- **desktop**: double titlebar in local library folders and massive space in overlay player\n- lastfm form broken in other locales #2447\n- spotify login broken due to new totp requirement #2494\n- spotify authentication 429 errors\n\n### Features\n\n- **local_library**: add support for x-flac, opus and x-wav\n- **translation**: add tagalog language support #2504\n- **translation**: add tamil translation for spotube #2501\n\n## New Contributors\n* @JusArthur made their first contribution in https://github.com/KRTirtho/spotube/pull/2504\n* @vishnumur777 made their first contribution in https://github.com/KRTirtho/spotube/pull/2501\n\n**Full Changelog**: https://github.com/KRTirtho/spotube/compare/v4.0.0...v4.0.1",
+          "downloadURL": "https://github.com/team-spotube/spotube/releases/download/v4.0.1/Spotube-iOS.ipa",
+          "size": 38520175
+        },
+        {
+          "version": "4.0.0",
+          "date": "2025-03-07T14:51:33Z",
+          "localizedDescription": "## Highlights:\n- Revamped UI from Material V3 to Shadcn design system \n    - More intuitive user interface\n    - Performant, responsive and adaptive design\n    - Better visuals, feedbacks and OLED friendly (pure black) color palette\n- Alternative YouTube engine support \n    - yt-dlp for desktop platforms\n    - NewPipe for Android\n- Android: Home screen widget support\n- Fixed music skipping, buffering or not playing at all\n- Custom editable Piped and Invidious instance support\n\n### Bug Fixes\n\n- SafeArea for global bottom items not working\n- SafeArea not working for bottom floating widgets\n- youtube video unplayable issue and use more ytClients\n- **ios**: downloads not working due to permission errors (#2180)\n- remove automaticallyImplyLeading from root tabs\n- **android**: back button not working and safe area issues\n- duplicates in recent section\n- youtube source taking too long to buffer\n- youtube tracks keeps skipping despite being matched correctly\n- follow artist not working #2057\n- youtube_explode_dart failing for many videos due to youtube ios client visitor data change\n- piped api not working\n\n### Features\n\n- **android**: home widget support (#2148)\n- rewrite entire app in shadcn-ui replacing material eww\n- grid/list customizable playbutton view\n- flag to hide spotify generated images with patterns\n- show placeholder images where there is no item or on empty page\n- pause playback when no internet connection\n- implement yt-dlp for desktop and NewPipeExtractor for Android (#2316)\n- custom piped & invidious instance support\n\n## What's Changed\n* fix(ios): downloads not working due to permission errors by @malikmiran in https://github.com/KRTirtho/spotube/pull/2180\n\n## New Contributors\n* @malikmiran made their first contribution in https://github.com/KRTirtho/spotube/pull/2180\n\n**Full Changelog**: https://github.com/KRTirtho/spotube/compare/v3.9.0...v4.0.0",
+          "downloadURL": "https://github.com/team-spotube/spotube/releases/download/v4.0.0/Spotube-iOS.ipa",
+          "size": 39241200
+        },
+        {
+          "version": "3.9.0",
+          "date": "2024-12-08T18:47:22Z",
+          "localizedDescription": "## Highlights\n\n- New [Invidious](https://invidious.io/) source addition\n- Track caching with export support\n\n### Bug Fixes\n\n- UI glitch when loading more user artists and albums\n- selecting an Alternative Track Source removes the current song from the queue #2039\n- **mobile**: ensure audio session is activated when playback is resumed after interruption #2092\n\n### Features\n\n- add invidious audio source and fix auto skipping tracks (#2005)\n- track caching and cached track export support (#2117)\n\n**Full Changelog**: https://github.com/KRTirtho/spotube/compare/v3.8.3...v3.9.0",
+          "downloadURL": "https://github.com/team-spotube/spotube/releases/download/v3.9.0/Spotube-iOS.ipa",
+          "size": 32162862
+        },
+        {
+          "version": "3.8.3",
+          "date": "2024-10-09T11:22:40Z",
+          "localizedDescription": "### Bug Fixes\n\n- update youtube_explode_dart to 2.2.3 to fix no playback (#1980)\n\n### Features\n\n- **macos**: enable same window webview support\n\n## What's Changed\n* Update youtube_explode_dart to 2.2.3 by @XaviFortes in https://github.com/KRTirtho/spotube/pull/1980\n\n## New Contributors\n* @XaviFortes made their first contribution in https://github.com/KRTirtho/spotube/pull/1980\n\n**Full Changelog**: https://github.com/KRTirtho/spotube/compare/v3.8.2...v3.8.3",
+          "downloadURL": "https://github.com/team-spotube/spotube/releases/download/v3.8.3/Spotube-iOS.ipa",
+          "size": 31486287
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      }
+    },
+    {
       "name": "Nuvio",
       "bundleIdentifier": "com.nuvio.media",
       "developerName": "NuvioMedia",
@@ -15,6 +105,36 @@
       "tintColor": "#1E88E5",
       "category": "entertainment",
       "versions": [
+        {
+          "version": "1.0.0",
+          "buildVersion": "157",
+          "date": "2026-11-15T18:28:31Z",
+          "localizedDescription": "# Nuvio 1.0.0\r\n\r\nThank you to everyone who has contributed to the project, tested the betas, and supported us along the way.\r\n\r\n> [!NOTE]\r\n> On Android, choose **Stable** in **Settings → About → Update channel** for fewer updates and a more stable build. Choose **Beta** for frequent updates, with possible breaking changes. If you were already on a beta build, you stay on **Beta** until you switch.\r\n",
+          "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/1.0.0/nuvio-1.0.0-full-release.ipa",
+          "size": 69922744,
+          "sha256": "d16afb96819d29477cad322c5f04c10769785023222d095fafd95ff8f54146b9",
+          "minOSVersion": "16.1"
+        },
+        {
+          "version": "0.6.13",
+          "buildVersion": "156",
+          "date": "2026-11-15T09:36:16Z",
+          "localizedDescription": "- [i18n: add French strings and align birth and death wording (#2664)](https://github.com/NuvioMedia/NuvioMobile/pull/2664) @SK-Gits  \r\n- [i18n(vi): update latest Vietnamese strings (#2622)](https://github.com/NuvioMedia/NuvioMobile/pull/2622) @blueocean2308  \r\n- [perf: smoother cold start and home on Android (#2652)](https://github.com/NuvioMedia/NuvioMobile/pull/2652) @skoruppa  \r\n- [fix(home): show hero only after its source catalogs load (#2651)](https://github.com/NuvioMedia/NuvioMobile/pull/2651) @skoruppa  \r\n- [feat(player): basic keyboard support (#2633)](https://github.com/NuvioMedia/NuvioMobile/pull/2633) @skoruppa  \r\n- [fix(cw): dismiss a next up show by its content id, as on TV (#2632)](https://github.com/NuvioMedia/NuvioMobile/pull/2632) @skoruppa  \r\n- [feat(cw): choose what selecting a Continue Watching item opens (#2630)](https://github.com/NuvioMedia/NuvioMobile/pull/2630) @skoruppa  \r\n- [Translation improvements and adjustments for Slovak language (#2625)](https://github.com/NuvioMedia/NuvioMobile/pull/2625) @mmsw91  \r\n- [i18n: add French strings for chapter title setting (#2621)](https://github.com/NuvioMedia/NuvioMobile/pull/2621) @SK-Gits  \r\n- [feat(player): fall back to the next matching source on failure (#2612)](https://github.com/NuvioMedia/NuvioMobile/pull/2612) @skoruppa  \r\n- [fix(player): show each start-up step on the loading screen, like NuvioTV (#2611)](https://github.com/NuvioMedia/NuvioMobile/pull/2611) @skoruppa  \r\n",
+          "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.6.13-beta/nuvio-0.6.13-full-release.ipa",
+          "size": 69922480,
+          "sha256": "e1e5608c40224cb8840b2afa61998d2e6c3b42556c7754138918b22b51bc31fa",
+          "minOSVersion": "16.1"
+        },
+        {
+          "version": "0.6.12",
+          "buildVersion": "155",
+          "date": "2026-11-12T00:37:11Z",
+          "localizedDescription": "- [feat(player): chapters setting for every engine, chapters on iOS and a chapter title toggle (#2609)](https://github.com/NuvioMedia/NuvioMobile/pull/2609) @skoruppa  \r\n- [fix(collections): respect \"Show catalog type\" in folders (#2608)](https://github.com/NuvioMedia/NuvioMobile/pull/2608) @skoruppa  \r\n- [fix(player): show the real cause of playback errors, like NuvioTV (#2607)](https://github.com/NuvioMedia/NuvioMobile/pull/2607) @skoruppa  \r\n- [fix(player): use the audio clock when mpv video time drops to 0 (#2605)](https://github.com/NuvioMedia/NuvioMobile/pull/2605) @skoruppa  \r\n- [fix(player): add an SPS/PPS init segment to HLS streams that lack them (#2606)](https://github.com/NuvioMedia/NuvioMobile/pull/2606) @skoruppa  \r\n- [fix(player): decode DASH MIME query hints before detection (#2600)](https://github.com/NuvioMedia/NuvioMobile/pull/2600) @retrocodes12  \r\n- [i18n(vi): update latest Vietnamese strings (#2601)](https://github.com/NuvioMedia/NuvioMobile/pull/2601) @blueocean2308  \r\n- [fix(streams): keep tokenized links for reuse and refresh expired saved links (#2598)](https://github.com/NuvioMedia/NuvioMobile/pull/2598) @skoruppa  \r\n- [i18n: add French string for signed-out notice (#2593)](https://github.com/NuvioMedia/NuvioMobile/pull/2593) @SK-Gits  \r\n- [Update Dutch (nl) strings and reorder Dutch in Settings (#2592)](https://github.com/NuvioMedia/NuvioMobile/pull/2592) @mronion212  \r\n",
+          "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.6.12-beta/nuvio-0.6.12-full-release.ipa",
+          "size": 69852349,
+          "sha256": "cc02dc57e268b43a1294841bf6e6a661c9189b1b801292c7bf7fa682ac472ae9",
+          "minOSVersion": "16.1"
+        },
         {
           "version": "0.6.11",
           "buildVersion": "154",
@@ -423,9 +543,18 @@
       "category": "entertainment",
       "versions": [
         {
+          "version": "1.1.8",
+          "date": "2026-11-15T20:23:33Z",
+          "localizedDescription": "by @itzzace0\n\nThe FlareStore certificate giveaway is still going in the YTKACE Telegram channel: https://t.me/ytkace\n\nWhat's new:\n• Updated to YouTube 21.46.3\n• Added Return YouTube Dislike for videos, Shorts and the description panel\n• YTKACE and YouTube buttons can now be mixed in the top row and the fullscreen bar\n• Added a left button column, and every player button can now be edited in the layout editor\n• Added fullscreen bar button toggles\n• Added a compact Quality Button and quality settings for AirPlay and Low Power Mode\n• Added an option to bypass the Premium device streaming limit\n• Added Shorts feed filters for live streams and posts\n• Shorts auto-scroll now waits while you read comments\n• Reworked Swipe to Seek and hold speed\n• PiP now uses native iOS PiP\n\nFixed:\n• Crash when the fullscreen buttons rebuild\n• PiP not starting again after a Short or after the first time\n• PiP starting when leaving the app with the video paused\n• Player download button with HLS\n• Captions turning back on after turning them off\n• Shorts missing on channels opened from a Short\n• Tab bar taps when the Shorts tab is hidden\n• Glass tab bar hidden behind incognito and the sleep timer strip\n• Controls hiding while using buttons, hold speed seeking, backup restore and title overlap\n\nYouTube 21.46.3 requires iOS 17, so there are two IPAs:\n• `YTKACE_1.1.8_YouTube_21.46.3.ipa` for iOS 17 and newer\n• `YTKACE_1.1.8_YouTube_iOS16_21.33.6.ipa` for iOS 16",
+          "downloadURL": "https://github.com/itzzace/ytkace/releases/download/v1.1.8/YTKACE_1.1.8_YouTube_21.46.3.ipa",
+          "size": 141821255,
+          "sha256": "5b4570509eaee80672a10f7befdc8bcef692105b887d386494b0179de82d0c4d",
+          "minOSVersion": "17.0"
+        },
+        {
           "version": "1.1.7",
           "date": "2026-11-10T21:54:48Z",
-          "localizedDescription": "by @itzzace0\n\n1,000 stars 🎉\nThanks for 1k stars! To celebrate, FlareStore is sponsoring a giveaway of 5 certificates in the new YTKACE Telegram channel: https://t.me/ytkace\n\nWhat's new:\n• Updated to YouTube 21.45.4\n• Button Layout: drag the player buttons into YouTube's top row, the row under it, or next to the fullscreen button\n• Added a Quality Button that shows the current quality\n• Added Auto Fullscreen and Exit Fullscreen at End\n• Added Swipe to Seek\n• Added Previous/Next Skip\n• Added Keep Playing, which stops the \"Continue watching?\" pause\n• Added a Playlist tab\n• Added a default video quality and audio language for downloads\n• Added Remove Live Videos from Home\n• Added an Auto-Scroll Delay for Shorts\n• Added a minimum segment length to SponsorBlock\n• Added iPhone Duo layouts\n\nFixed:\n• Videos missing from Home on some accounts\n• Lock screen scrubbing and skip not working for downloads\n• Tabs not switching when Home is hidden\n• Live streams counted as finished in the queue\n• Auto-scroll skipping Shorts before they end\n• Show Status Bar in Fullscreen not working\n• Invisible back button with OLED in light mode\n• HLS Streams not falling back when a video fails\n• Tab icons and labels on vertical tab bars\n\nYouTube 21.45.4 requires iOS 17, so there are two IPAs:\n• `YTKACE_1.1.7_YouTube_21.45.4.ipa` for iOS 17 and newer\n• `YTKACE_1.1.7_YouTube_iOS16_21.33.6.ipa` for iOS 16",
+          "localizedDescription": "by @itzzace0\n\n1,000 stars 🎉\nThanks for 1k stars! To celebrate, [FlareStore](https://flarestore.vip/p/ytkace) is sponsoring a giveaway of 5 certificates in the new YTKACE Telegram channel: https://t.me/ytkace\n\nWhat's new:\n• Updated to YouTube 21.45.4\n• Button Layout: drag the player buttons into YouTube's top row, the row under it, or next to the fullscreen button\n• Added a Quality Button that shows the current quality\n• Added Auto Fullscreen and Exit Fullscreen at End\n• Added Swipe to Seek\n• Added Previous/Next Skip\n• Added Keep Playing, which stops the \"Continue watching?\" pause\n• Added a Playlist tab\n• Added a default video quality and audio language for downloads\n• Added Remove Live Videos from Home\n• Added an Auto-Scroll Delay for Shorts\n• Added a minimum segment length to SponsorBlock\n• Added iPhone Duo layouts\n\nFixed:\n• Videos missing from Home on some accounts\n• Lock screen scrubbing and skip not working for downloads\n• Tabs not switching when Home is hidden\n• Live streams counted as finished in the queue\n• Auto-scroll skipping Shorts before they end\n• Show Status Bar in Fullscreen not working\n• Invisible back button with OLED in light mode\n• HLS Streams not falling back when a video fails\n• Tab icons and labels on vertical tab bars\n\nYouTube 21.45.4 requires iOS 17, so there are two IPAs:\n• `YTKACE_1.1.7_YouTube_21.45.4.ipa` for iOS 17 and newer\n• `YTKACE_1.1.7_YouTube_iOS16_21.33.6.ipa` for iOS 16",
           "downloadURL": "https://github.com/itzzace/ytkace/releases/download/v1.1.7/YTKACE_1.1.7_YouTube_21.45.4.ipa",
           "size": 140303052,
           "sha256": "c29cc9b35fd97a34e1f9f42e244ee12bf85fa67984c9aa3e926a73fe7baa91bb",
@@ -501,15 +630,6 @@
           "downloadURL": "https://github.com/itzzace/ytkace/releases/download/v1.0.0/YTKACE_1.0.0_YouTube_21.37.5.ipa",
           "size": 136694474,
           "sha256": "7b1bab46cd819f147ad3abc0e30cae1a2b861b0d2c554daaf4eba548205516c0",
-          "minOSVersion": "17.0"
-        },
-        {
-          "version": "0.9.3",
-          "date": "2026-09-12T18:12:13Z",
-          "localizedDescription": "by @itzzace0\n\nWhat's new:\n• Updated for YouTube 21.36.6\n• Added a toggle to remove the Save button from Shorts\n\nFixed:\n• Fixed the feed lagging while scrolling with Remove Shorts, Products, Mixes or Community Posts on\n• Fixed the You tab moving to the end of the tab bar after changing other tabs\n• Fixed hold to speed staying stuck at the held speed after letting go\n• Fixed the Save button in Shorts overlapping the other buttons\n• Fixed Block Premium Prompts stopping community post images from opening\n• Fixed Clear Cache saying there was nothing to clear while YouTube's video cache kept growing\n\nYouTube 21.36.6 requires iOS 17, so there are two IPAs:\n• `YTKACE_0.9.3_YouTube_21.36.6.ipa` for iOS 17 and newer\n• `YTKACE_0.9.3_YouTube_iOS16_21.33.6.ipa` for iOS 16",
-          "downloadURL": "https://github.com/itzzace/ytkace/releases/download/v0.9.3/YTKACE_0.9.3_YouTube_21.36.6.ipa",
-          "size": 134780934,
-          "sha256": "11efe88e6b621f3f12d0972ef19530b078f2f8d4a38d3b5115e89c9748f44720",
           "minOSVersion": "17.0"
         }
       ],
