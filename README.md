@@ -29,7 +29,7 @@ Prefer to add them one by one? Copy a URL, then in Store open **Sources → +** 
 <!-- sources:start -->
 | Source | About | Kind | Source URL |
 | --- | --- | --- | --- |
-| [Taurus](https://github.com/samj-exe/taurus) | Open-source Spotify client with built-in Premium, maintained by the Taurus project. | External | `https://raw.githubusercontent.com/samj-exe/taurus/refs/heads/stable/altstore-source.json` |
+| [Spotube](https://spotube.cc) | Open-source, plugin-powered music streaming app. Official iOS builds, generated from GitHub releases. | Generated | `https://raw.githubusercontent.com/zKevinLy/aiostore/main/sources/spotube.json` |
 | [Nuvio](https://github.com/NuvioMedia/NuvioMobile) | Free, open-source media app. Official iOS builds, published by the Nuvio developers. | External | `https://raw.githubusercontent.com/NuvioMedia/NuvioMobile/refs/heads/cmp-rewrite/store.json` |
 | [YTKACE](https://github.com/itzzace/ytkace) | YouTube enhancer for iOS with SponsorBlock, background playback and downloads. Generated from GitHub releases. | Generated | `https://raw.githubusercontent.com/zKevinLy/aiostore/main/sources/ytkace.json` |
 <!-- sources:end -->

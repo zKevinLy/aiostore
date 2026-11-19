@@ -8,7 +8,7 @@ import { build } from '../scripts/build.mjs';
 import { validate } from '../scripts/validate.mjs';
 import { applyTable, renderTable } from '../scripts/lib/render.mjs';
 import { loadManifest } from '../scripts/lib/manifest.mjs';
-import { releases, repoInfo } from './fixtures.mjs';
+import { releases, repoInfo, testManifest } from './fixtures.mjs';
 
 /** A fetch that serves one tiny external source per URL (or fails). */
 function fakeFetch({ fail = false } = {}) {
@@ -16,7 +16,7 @@ function fakeFetch({ fail = false } = {}) {
   const impl = async (url) => {
     calls.push(url);
     if (fail) return { ok: false, status: 503 };
-    const id = url.includes('taurus') ? 'taurus' : 'nuvio';
+    const id = url.includes('example') ? 'example' : 'nuvio';
     return {
       ok: true,
       json: async () => ({
@@ -54,7 +54,8 @@ const quiet = () => {};
 
 beforeEach(async () => {
   root = await mkdtemp(path.join(os.tmpdir(), 'aiostore-'));
-  await copyFile(path.join(REPO_ROOT, 'sources.json'), path.join(root, 'sources.json'));
+  // A fixed manifest, so swapping a real source in sources.json never breaks these tests.
+  await writeFile(path.join(root, 'sources.json'), `${JSON.stringify(testManifest, null, 2)}\n`);
   await copyFile(path.join(REPO_ROOT, 'README.md'), path.join(root, 'README.md'));
 });
 
@@ -76,7 +77,7 @@ describe('build', () => {
 
     const source = JSON.parse(await read('sources/ytkace.json'));
     assert.equal(source.apps[0].bundleIdentifier, 'com.google.ios.youtube');
-    // sources.json only has the iOS 17+ rule for YTKACE, so v1.1.7 and v1.1.6 give one entry each.
+    // The test manifest only has the iOS 17+ rule for YTKACE, so v1.1.7 and v1.1.6 give one entry each.
     assert.equal(source.apps[0].versions.length, 2);
     assert.ok(source.apps[0].versions.every((v) => v.minOSVersion === '17.0'));
   });
@@ -85,13 +86,13 @@ describe('build', () => {
     const fetchImpl = fakeFetch();
     await build({ root, github: fakeGitHub(), fetchImpl, log: quiet });
     assert.equal(fetchImpl.calls.length, 2);
-    assert.equal(JSON.parse(await read('sources/taurus.json')).apps[0].name, 'taurus');
+    assert.equal(JSON.parse(await read('sources/example.json')).apps[0].name, 'example');
 
     const store = JSON.parse(await read('store.json'));
     assert.equal(store.name, 'AIOStore');
     assert.deepEqual(
       store.apps.map((app) => app.name),
-      ['taurus', 'nuvio', 'YTKACE'],
+      ['example', 'nuvio', 'YTKACE'],
     );
     assert.equal(
       store.sourceURL,
@@ -104,7 +105,7 @@ describe('build', () => {
     const before = await read('store.json');
 
     const result = await build({ root, github: fakeGitHub(), fetchImpl: fakeFetch({ fail: true }), log: quiet });
-    assert.deepEqual(result.failed.map((f) => f.id), ['taurus', 'nuvio']);
+    assert.deepEqual(result.failed.map((f) => f.id), ['example', 'nuvio']);
     assert.equal(await read('store.json'), before);
   });
 

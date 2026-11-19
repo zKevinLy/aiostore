@@ -3,6 +3,41 @@
 
 export const manifest = { repository: 'zKevinLy/aiostore', branch: 'main' };
 
+// What build.test.mjs writes as sources.json: two external sources and one generated one.
+export const testManifest = {
+  name: 'AIOStore',
+  subtitle: 'Every source in one place.',
+  maxVersions: 3,
+  ...manifest,
+  sources: [
+    {
+      id: 'example',
+      type: 'external',
+      name: 'Example',
+      description: 'An external source.',
+      homepage: 'https://example.com/app',
+      url: 'https://example.com/source.json',
+    },
+    {
+      id: 'nuvio',
+      type: 'external',
+      name: 'Nuvio',
+      description: 'Free, open-source media app.',
+      homepage: 'https://github.com/NuvioMedia/NuvioMobile',
+      url: 'https://raw.githubusercontent.com/NuvioMedia/NuvioMobile/refs/heads/cmp-rewrite/store.json',
+    },
+    {
+      id: 'ytkace',
+      type: 'github',
+      name: 'YTKACE',
+      description: 'YouTube enhancer for iOS.',
+      repo: 'itzzace/ytkace',
+      app: { name: 'YTKACE', bundleIdentifier: 'com.google.ios.youtube', developerName: 'itzzace' },
+      assets: [{ match: '^YTKACE_.+_YouTube_[0-9.]+\\.ipa$', minOSVersion: '17.0' }],
+    },
+  ],
+};
+
 export const ytkaceSource = {
   id: 'ytkace',
   type: 'github',
