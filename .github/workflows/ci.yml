@@ -27,7 +27,9 @@ jobs:
         with:
           node-version-file: .nvmrc
 
-      # No `npm ci`: the project has no dependencies.
+      # No `npm ci`: the project has no dependencies. `npm test` first rebuilds store.json and
+      # the README table offline (the `pretest` script), so a stale generated file never fails
+      # CI; the "Update sources" workflow commits the refreshed files on main.
       - run: npm test
 
       # sources.json, every file in sources/, store.json and the README table.

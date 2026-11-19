@@ -12,11 +12,13 @@ on:
         description: Only rebuild this source id (leave blank for all)
         required: false
         type: string
-  # Adding or changing an entry in sources.json builds it straight away.
+  # Adding or changing an entry in sources.json builds it straight away. Editing or deleting
+  # a snapshot by hand does too, so store.json and the README table never need a manual rebuild.
   push:
     branches: [main]
     paths:
       - sources.json
+      - sources/**
       - scripts/**
 
 concurrency:

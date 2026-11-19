@@ -111,7 +111,7 @@ Versions follow [Conventional Commits](https://www.conventionalcommits.org): `fe
 Needs Node 22+. There are no dependencies to install.
 
 ```sh
-npm test                       # unit tests
+npm test                       # unit tests (first rebuilds store.json and the table, offline)
 npm run validate               # checks sources.json, sources/, store.json and the table above
 npm run build:offline          # rebuild store.json and the table from sources/ (no network)
 GITHUB_TOKEN=... npm run build # regenerate everything from GitHub
