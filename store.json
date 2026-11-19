@@ -6,6 +6,45 @@
   "sourceURL": "https://raw.githubusercontent.com/zKevinLy/aiostore/main/store.json",
   "apps": [
     {
+      "name": "Spotube",
+      "bundleIdentifier": "oss.krtirtho.spotube",
+      "developerName": "Spotube",
+      "subtitle": "Open-source music streaming",
+      "localizedDescription": "🎧 Open source music streaming app! Available for both desktop & mobile!",
+      "iconURL": "https://avatars.githubusercontent.com/u/263316120?v=4",
+      "category": "entertainment",
+      "versions": [
+        {
+          "version": "6.0.0",
+          "date": "2026-11-10T03:40:12Z",
+          "localizedDescription": "## Spotube V6 is here 🎉🚀\n\n### 🔥Highlights\n\n- Migration from Flutter to Compose Multiplatform, [learn why we did it](https://spotube.cc/blog/compose-multiplatform-migration/)\n- UI redesign, introducing [Millennium](https://github.com/team-spotube/millennium/) UI. 2000s look and feel with 2026's modernity\n- Jam sessions, play music with friends and family in sync. Runs on a new dedicated room server, with host-only controls and device bans to keep rooms safe\n- Full Android Auto integration. Browse, Library, Search all are there now, not just queue\n- iOS now plays audio through VLC, so every streaming format works, and keeps playing in the background\n- Migration from hetu_script to Kotlin for plugin development. Powered by [Zipline by Cashapp](https://github.com/cashapp/zipline/)\n- More extensibility, plugin support for Lyrics provider and Scrobbling providers\n- Redesigned plugin manager. Plugin login pages can only reach cookies and scripts of the domains they declare\n- Native Android APK, with reduced apk size, performance improvements and more native android integrations.\n- Relicensed from BSD-4-Clause to AGPL-3.0-or-later for a more Open Source friendly licensing. And for preventing distribution of closed source and maliciously modified Spotube.\n\n### 💫 Features\n\n- Migration to Compose Multiplatform\n- Add ChipTab component and refactor SearchScreen to use it\n- Add AutocompleteTextField component and integrate it into SearchScreen\n- Enhance AutocompleteTextField with focus management and dropdown behavior\n- Enhance AppSidebar with improved button interactions and visual feedback\n- Implement endless playback recommendations in DeviceAudioPlayerQueue\n- Add GhostIconButton component and enhance button interactions in TrackList\n- Replace IconButton with GhostIconButton in AppExpandedPlayer and AppLargePlayer for improved visual consistency\n- Replace IconButton with GhostIconButton in PlayerQueueContent and PlayableCard for visual consistency\n- Enhance UI components with LocalBaseUITheme for consistent styling and improved interactions\n- Enhance button styles and interactions in Buttons and Theme components for improved UI consistency\n- Simplify highlight implementation in UI components for improved readability and maintainability\n- Add genre selection and tabs to HomeScreen for improved content navigation\n- Implement artist overview screen with loading, error handling, and pagination for albums, related artists, and featured playlists\n- Add genre and featured browsing capabilities to MediaBrowseHelper\n- Implement playlist creation and editing functionality with UI components\n- Add 'Add to Playlist' functionality with UI components and dialogs\n- Add Toggle component and update UI to use it in place of Switch\n- Implement settings section cards for updates, desktop, language, caching, and plugins\n- Update icons in settings sections to use Iconsax library for improved UI consistency\n- Replace FeatherIcons with Iconsax in PluginCard and PluginPermissionsDialog for improved UI consistency\n- Refactor PluginPermissionsDialog to use custom UI components for improved consistency and readability\n- Enhance UI with shared element transitions and improve state management in album and playlist screens\n- Integrate Uniffi for audio metadata reading and writing with Lofty library\n- Replace FeatherIcons with Iconsax in window controls and update sidebar with better design\n- Implement haze effect and UI enhancements in AppLargePlayer and AppShell\n- Enhance haze effect integration in AppShell and AppSidebar for improved UI experience\n- Add adaptive dialog bottom sheet component and enhance plugin installation UI\n- Enhance AdaptiveDialogBottomSheet with dismiss icon and improve plugin screen layout\n- Implement CollectionView component and refactor Album, Playlist, SavedTracks screens for improved UI consistency\n- Add current time management in AudioPlayer for improved playback control\n- Simplify playback control logic in AudioPlayer by removing red…",
+          "downloadURL": "https://github.com/team-spotube/spotube/releases/download/v6.0.0/Spotube-ios.ipa",
+          "size": 45020424,
+          "sha256": "801f3039bab4d09c9ff290d52a495c37aa6707e74bf3d27d22d4b5fcd85fe5fe"
+        },
+        {
+          "version": "5.1.2",
+          "date": "2026-06-05T05:10:18Z",
+          "localizedDescription": "### Bug Fixes\n\n- **newpipe**: Fallback to muxed streams if no audio stream is available\n- Dismiss search dropdown and keyboard on submission\n- Custom image helper null exception\n\n**Full Changelog**: https://github.com/KRTirtho/spotube/compare/v5.1.1...v5.1.2",
+          "downloadURL": "https://github.com/team-spotube/spotube/releases/download/v5.1.2/Spotube-iOS.ipa",
+          "size": 34853093,
+          "sha256": "9ec07f5ff1302567075b3c02cb3a4baac5fa475a65f71a3878f2d78744ba7bc0"
+        },
+        {
+          "version": "5.1.1",
+          "date": "2026-02-24T13:15:09Z",
+          "localizedDescription": "## v5.1.1\n\n### Bug Fixes\n\n- Upgrade NewPipeExtractor to latest version fixing playback issue\n- Lyrics not working\n\n\n## What's Changed\n* chore: replace windows app icon by a higher resolution by @TobseF in https://github.com/KRTirtho/spotube/pull/2838\n\n## New Contributors\n* @TobseF made their first contribution in https://github.com/KRTirtho/spotube/pull/2838\n\n**Full Changelog**: https://github.com/KRTirtho/spotube/compare/v5.1.0...v5.1.1",
+          "downloadURL": "https://github.com/team-spotube/spotube/releases/download/v5.1.1/Spotube-iOS.ipa",
+          "size": 34926819,
+          "sha256": "34917e2c0dfbecef304943483f465b83ec97e194c562adf6241347a8a22229a3"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      }
+    },
+    {
       "name": "Nuvio",
       "bundleIdentifier": "com.nuvio.media",
       "developerName": "NuvioMedia",
