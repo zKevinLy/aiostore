@@ -18,6 +18,8 @@ jobs:
   verify:
     name: Test & validate
     runs-on: ubuntu-latest
+    outputs:
+      stale: ${{ steps.fresh.outputs.stale }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -32,14 +34,27 @@ jobs:
       # CI; the "Update sources" workflow commits the refreshed files on main.
       - run: npm test
 
+      # The test run above rebuilt the generated files. If that changed anything, the commit
+      # being tested was stale: "Update sources" will commit the fresh files and release those,
+      # so this commit must not be released itself (the release would fail its own validate).
+      - name: Are the generated files up to date?
+        id: fresh
+        run: |
+          if [ -z "$(git status --porcelain -- store.json README.md sources)" ]; then
+            echo "stale=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "stale=true" >> "$GITHUB_OUTPUT"
+            echo "::notice::Generated files were out of date; releasing is left to the Update sources run."
+          fi
+
       # sources.json, every file in sources/, store.json and the README table.
       - run: npm run validate
 
-  # Only for pushes to main that passed verify.
+  # Only for pushes to main that passed verify with up-to-date generated files.
   release:
     name: Release
     needs: verify
-    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' && needs.verify.outputs.stale != 'true' }}
     permissions:
       contents: write # create the tag + GitHub Release
     uses: ./.github/workflows/release.yml
