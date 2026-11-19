@@ -10,7 +10,7 @@
       "type": "github",
       "name": "Spotube",
       "description": "Open-source, plugin-powered music streaming app. Official iOS builds, generated from GitHub releases.",
-      "homepage": "https://spotube.cc",
+      "homepage": "https://github.com/team-spotube/spotube",
       "repo": "team-spotube/spotube",
       "tagPattern": "^v(\\d+\\.\\d+\\.\\d+)$",
       "maxReleases": 3,
