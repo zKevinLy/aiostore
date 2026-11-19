@@ -7,7 +7,6 @@ export const manifest = { repository: 'zKevinLy/aiostore', branch: 'main' };
 export const testManifest = {
   name: 'AIOStore',
   subtitle: 'Every source in one place.',
-  maxVersions: 3,
   ...manifest,
   sources: [
     {

@@ -91,12 +91,6 @@ describe('validateManifest', () => {
     assert.equal(validateManifest(manifest).length, 3);
   });
 
-  it('checks maxVersions, globally and per source', () => {
-    assert.match(problems((m) => (m.maxVersions = 0)), /maxVersions/);
-    assert.match(problems((m) => (m.sources[0].maxVersions = 'x')), /maxVersions/);
-    assert.deepEqual(problems((m) => { m.maxVersions = 3; m.sources[0].maxVersions = 5; }), '');
-  });
-
   it('rejects an unknown type and an empty list', () => {
     assert.match(problems((m) => (m.sources[0].type = 'ftp')), /type must be/);
     assert.match(problems((m) => (m.sources = [])), /non-empty/);

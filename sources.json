@@ -1,7 +1,6 @@
 {
   "name": "AIOStore",
   "subtitle": "Every source in one place.",
-  "maxVersions": 3,
   "repository": "zKevinLy/aiostore",
   "branch": "main",
   "sources": [
@@ -10,10 +9,9 @@
       "type": "github",
       "name": "Spotube",
       "description": "Open-source, plugin-powered music streaming app. Official iOS builds, generated from GitHub releases.",
-      "homepage": "https://github.com/team-spotube/spotube",
+      "homepage": "https://spotube.cc",
       "repo": "team-spotube/spotube",
       "tagPattern": "^v(\\d+\\.\\d+\\.\\d+)$",
-      "maxReleases": 3,
       "app": {
         "name": "Spotube",
         "bundleIdentifier": "oss.krtirtho.spotube",

@@ -1,6 +1,6 @@
 # AIOStore
 
-One master list of "Store" sources, merged into a single source you add once.
+One master list of [Store](https://Store.io) sources, merged into a single source you add once.
 
 Some sources come straight from the app's developers. For apps that only publish `.ipa` files on GitHub
 releases, this repo **generates** a source automatically and keeps it up to date.
@@ -18,9 +18,7 @@ https://raw.githubusercontent.com/zKevinLy/aiostore/main/store.json
 [`store.json`](store.json) holds every app from every source below. It is rebuilt for you; never edit it.
 If two sources ship the same bundle ID, the one listed first in `sources.json` wins.
 
-To keep it small, each app keeps only its newest **3 versions** (a release with an iOS 16 and an iOS 17
-build counts as one). Change `maxVersions` at the top of `sources.json`, or add it to one source to
-override it for that source. The files in `sources/` keep the full history.
+Every version of every app is passed through as the source lists it; Store tidies up old ones itself.
 
 ## Sources
 
@@ -29,7 +27,7 @@ Prefer to add them one by one? Copy a URL, then in Store open **Sources → +** 
 <!-- sources:start -->
 | Source | About | Kind | Source URL |
 | --- | --- | --- | --- |
-| [Spotube](https://github.com/team-spotube/spotube) | Open-source, plugin-powered music streaming app. Official iOS builds, generated from GitHub releases. | Generated | `https://raw.githubusercontent.com/zKevinLy/aiostore/main/sources/spotube.json` |
+| [Spotube](https://spotube.cc) | Open-source, plugin-powered music streaming app. Official iOS builds, generated from GitHub releases. | Generated | `https://raw.githubusercontent.com/zKevinLy/aiostore/main/sources/spotube.json` |
 | [Nuvio](https://github.com/NuvioMedia/NuvioMobile) | Free, open-source media app. Official iOS builds, published by the Nuvio developers. | External | `https://raw.githubusercontent.com/NuvioMedia/NuvioMobile/refs/heads/cmp-rewrite/store.json` |
 | [YTKACE](https://github.com/itzzace/ytkace) | YouTube enhancer for iOS with SponsorBlock, background playback and downloads. Generated from GitHub releases. | Generated | `https://raw.githubusercontent.com/zKevinLy/aiostore/main/sources/ytkace.json` |
 <!-- sources:end -->
