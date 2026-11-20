@@ -28,6 +28,7 @@ Prefer to add them one by one? Copy a URL, then in Store open **Sources → +** 
 | Source | About | Kind | Source URL |
 | --- | --- | --- | --- |
 | [Spotube](https://spotube.cc) | Open-source, plugin-powered music streaming app. Official iOS builds, generated from GitHub releases. | Generated | `https://raw.githubusercontent.com/zKevinLy/aiostore/main/sources/spotube.json` |
+| [Taurus](https://github.com/samj-exe/taurus) | Spotify mod with built-in premium features and Liquid Glass UI. Official source from the Taurus developers. | External | `https://raw.githubusercontent.com/samj-exe/taurus/stable/altstore-source.json` |
 | [Nuvio](https://github.com/NuvioMedia/NuvioMobile) | Free, open-source media app. Official iOS builds, published by the Nuvio developers. | External | `https://raw.githubusercontent.com/NuvioMedia/NuvioMobile/refs/heads/cmp-rewrite/store.json` |
 | [YTKACE](https://github.com/itzzace/ytkace) | YouTube enhancer for iOS with SponsorBlock, background playback and downloads. Generated from GitHub releases. | Generated | `https://raw.githubusercontent.com/zKevinLy/aiostore/main/sources/ytkace.json` |
 <!-- sources:end -->
