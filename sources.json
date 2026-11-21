@@ -26,14 +26,6 @@
       ]
     },
     {
-      "id": "taurus",
-      "type": "external",
-      "name": "Taurus",
-      "description": "Spotify mod with built-in premium features and Liquid Glass UI. Official source from the Taurus developers.",
-      "homepage": "https://github.com/samj-exe/taurus",
-      "url": "https://raw.githubusercontent.com/samj-exe/taurus/stable/altstore-source.json"
-    },
-    {
       "id": "nuvio",
       "type": "external",
       "name": "Nuvio",
