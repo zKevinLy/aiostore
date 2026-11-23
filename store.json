@@ -553,6 +553,15 @@
       "category": "entertainment",
       "versions": [
         {
+          "version": "1.1.9",
+          "date": "2026-11-22T23:14:34Z",
+          "localizedDescription": "by @itzzace0\n\nWhat's new:\n• Updated to YouTube 21.47.6\n• Action bar editor: reorder buttons and move ⋯ items into the bar\n• Added Remove AI Summaries\n• Added Avoid Notch Cutoff\n• Added an option to disable PiP from the miniplayer\n• Added a fullscreen orientation option, and vertical videos stay in portrait\n• Added the Open in YTKACE Safari extension\n• Remove Products now also hides product rows and cards in feeds, search and the iPad sidebar\n• Backups moved to their own page with last backup and size details\n• Swipe to Seek shows the preview frame and a bigger scrubber\n\nFixed:\n• Launch hang and crash with Remove Filter Chips on the new Home tabs layout\n• Products panel opening on its own\n• PiP falling back for free accounts outside the US\n• Dislike count on iPhone when Dislike is in the ⋯ menu\n• Hold speed pill in right-to-left languages and at 2x\n• Blank search with Shorts hidden\n• Messages button showing on some tabs\n• HLS playback fix not fully applying on newer YouTube versions\n\nYouTube 21.47.6 requires iOS 17, so there are two IPAs:\n• `YTKACE_1.1.9_YouTube_21.47.6.ipa` for iOS 17 and newer\n• `YTKACE_1.1.9_YouTube_iOS16_21.33.6.ipa` for iOS 16",
+          "downloadURL": "https://github.com/itzzace/ytkace/releases/download/v1.1.9/YTKACE_1.1.9_YouTube_21.47.6.ipa",
+          "size": 143414110,
+          "sha256": "360497d360b2a94ac44a43c188c655462e5a3b4e1cd4e484840518b31a80c021",
+          "minOSVersion": "17.0"
+        },
+        {
           "version": "1.1.8",
           "date": "2026-11-15T20:23:33Z",
           "localizedDescription": "by @itzzace0\n\nThe FlareStore certificate giveaway is still going in the YTKACE Telegram channel: https://t.me/ytkace\n\nWhat's new:\n• Updated to YouTube 21.46.3\n• Added Return YouTube Dislike for videos, Shorts and the description panel\n• YTKACE and YouTube buttons can now be mixed in the top row and the fullscreen bar\n• Added a left button column, and every player button can now be edited in the layout editor\n• Added fullscreen bar button toggles\n• Added a compact Quality Button and quality settings for AirPlay and Low Power Mode\n• Added an option to bypass the Premium device streaming limit\n• Added Shorts feed filters for live streams and posts\n• Shorts auto-scroll now waits while you read comments\n• Reworked Swipe to Seek and hold speed\n• PiP now uses native iOS PiP\n\nFixed:\n• Crash when the fullscreen buttons rebuild\n• PiP not starting again after a Short or after the first time\n• PiP starting when leaving the app with the video paused\n• Player download button with HLS\n• Captions turning back on after turning them off\n• Shorts missing on channels opened from a Short\n• Tab bar taps when the Shorts tab is hidden\n• Glass tab bar hidden behind incognito and the sleep timer strip\n• Controls hiding while using buttons, hold speed seeking, backup restore and title overlap\n\nYouTube 21.46.3 requires iOS 17, so there are two IPAs:\n• `YTKACE_1.1.8_YouTube_21.46.3.ipa` for iOS 17 and newer\n• `YTKACE_1.1.8_YouTube_iOS16_21.33.6.ipa` for iOS 16",
@@ -631,15 +640,6 @@
           "downloadURL": "https://github.com/itzzace/ytkace/releases/download/v1.0.1/YTKACE_1.0.1_YouTube_21.38.2.ipa",
           "size": 137039590,
           "sha256": "1fef63df79e36a575dca65ff3584b1a293958e3dc6dc597af9ba05f4a2e56dbb",
-          "minOSVersion": "17.0"
-        },
-        {
-          "version": "1.0.0",
-          "date": "2026-09-20T17:12:54Z",
-          "localizedDescription": "by @itzzace0\n\nWhat's new:\n• Updated to YouTube 21.37.5\n• Queue videos without Premium — play next, play last, reorder, shuffle, loop and clear\n• Playlist downloads — grab every video or pick the ones you want\n• YouTube's Download button can now open the YTKACE menu\n• Choose where the download button lives: player overlay, YouTube's button, or both\n• Save downloads to the share sheet, with separate video and audio destinations\n• Hide the products shelf\n• iOS 15 support for the tweak packages\n\nFixed:\n• 2K and 4K missing from the download quality list\n• Shorts Save button not removed unless YouTube was in English\n• Community posts breaking with Block Premium Prompts on\n• Action bar disappearing while scrolling the feed\n• Settings unreachable if both the YTKACE and Library tabs were removed\n• YTKACE settings opening another tweak's settings when both were installed\n\nYouTube 21.37.5 requires iOS 17, so there are two IPAs:\n• `YTKACE_1.0.0_YouTube_21.37.5.ipa` for iOS 17 and newer\n• `YTKACE_1.0.0_YouTube_iOS16_21.33.6.ipa` for iOS 16",
-          "downloadURL": "https://github.com/itzzace/ytkace/releases/download/v1.0.0/YTKACE_1.0.0_YouTube_21.37.5.ipa",
-          "size": 136694474,
-          "sha256": "7b1bab46cd819f147ad3abc0e30cae1a2b861b0d2c554daaf4eba548205516c0",
           "minOSVersion": "17.0"
         }
       ],
